@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{% block content %}
+  <h2>Welcome to Fitapp</h2>
+    {% if user.is_authenticated %}
+    <h3>Hello: {{user.username}}</h3>
+
+
+{% endif %}
+{% endblock %}
