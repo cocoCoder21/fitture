@@ -17,7 +17,7 @@ import os
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 TEMPLATE_DIR1 = os.path.join(BASE_DIR, 'fitapp/templates')
 TEMPLATE_DIR2 = os.path.join(BASE_DIR, 'templates')
-
+STATIC_DIR = os.path.join(BASE_DIR, 'fitapp/static')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -121,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [STATIC_DIR]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'fitapp/media')
