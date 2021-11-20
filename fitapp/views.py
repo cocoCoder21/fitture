@@ -15,6 +15,7 @@ def fitture(request):
 def about(request):
     return render(request, 'about.html')
 
+
 def user_signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -28,14 +29,10 @@ def user_signup(request):
             profile = userprofile.save(commit=False)
 
             profile.user = user
-
             profile.save()
-            user = authenticate(username=username, password=password)
-            if user and user.is_active:
-                login(request, user)
-                return render(request, 'user_home.html')
-        else:
-            print(userinfo.errors, userprofile.errors)
+
+            return render(request, 'login.html')
+
     else:
         userinfo = UserInfoForm()
         userprofile = UserProfileForm()
@@ -45,15 +42,15 @@ def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
+
         user = authenticate(username=username, password=password)
         if user and user.is_active:
             login(request, user)
-            # return HttpResponseRedirect(reverse('about'))
-            return render(request, 'user_home.html')
+            return HttpResponseRedirect(reverse('fitapp:user-account'))
+
         else:
-            print("Someone tried to login and failed.")
-            print("They used username: {} and password: {}".format(username,password))
-            return HttpResponse("Invalid login details supplied.")
+                # If account is not active:
+                return HttpResponse("Your account is not active.")
 
     else:
         pass
@@ -63,13 +60,16 @@ def user_login(request):
 # ================================= USER ACCOUNT HOME PAGE FUNCTIONALITIES =====================================
 
 def home(request):
-    return render(request, 'user_home.html')
+    return render(request, 'user_account.html')
 
 def settings(request):
     return render(request, 'user-settings.html')
 
 def us(request):
     return render(request, 'us.html')
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 
 @login_required
