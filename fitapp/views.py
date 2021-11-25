@@ -46,7 +46,7 @@ def user_login(request):
         user = authenticate(username=username, password=password)
         if user and user.is_active:
             login(request, user)
-            return HttpResponseRedirect(reverse('fitapp:user-account'))
+            return HttpResponseRedirect(reverse('landing-page'))
 
         else:
                 # If account is not active:
