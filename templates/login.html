@@ -2,7 +2,7 @@
 {% block content %}
   <div class="container">
     <div class="jumbotron">
-
+      {% if not user.is_authenticated %}
         <form method="post">
           {% csrf_token %}
           {# A more "HTML" way of creating the login form#}
@@ -15,6 +15,7 @@
           <input type="submit" name="" value="Login">
 
         </form>
+        {% endif %}
 
     </div>
   </div>

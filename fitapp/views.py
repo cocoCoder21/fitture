@@ -31,7 +31,7 @@ def user_signup(request):
             profile.user = user
             profile.save()
 
-            return render(request, 'login.html')
+            return HttpResponseRedirect(reverse('user_login'))
 
     else:
         userinfo = UserInfoForm()
