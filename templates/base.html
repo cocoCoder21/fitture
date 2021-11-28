@@ -35,7 +35,7 @@
               Settings
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="{% url 'fitapp:user_profile' username=user.username%}">Profile</a></li>
               <li><a class="dropdown-item" href="{% url  'about'%}">About</a></li>
               <li><a class="dropdown-item" href="#">Edit Profile</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -58,7 +58,6 @@
       </div>
     </div>
   </nav>
-
   <div class="container">
     {% block content%}
     {% endblock %}
