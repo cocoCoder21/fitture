@@ -1,0 +1,71 @@
+section.about {
+  background-color: rgba(235, 235, 235, 0.5);
+  border: 1 solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+p {
+  width: 90%;
+}
+div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.about-col1 {
+  margin: 20px 50px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  background-image: url("../images/about1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.about-col2 {
+  margin: 20px 50px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  background-image: url("../images/about2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.about-col3 {
+  margin: 20px 50px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  background-image: url("../images/about3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.layer {
+  height: inherit;
+  width: inherit;
+  padding: 15px 10px;
+  opacity: 0;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+div.layer:hover {
+  background-color: rgba(96, 161, 84, 0.9);
+  opacity: 1;
+}
+
+div.layer h3 {
+  position: relative;
+  top: 160px;
+}
+
+div.layer p2 {
+  position: relative;
+  top: 180px;
+}

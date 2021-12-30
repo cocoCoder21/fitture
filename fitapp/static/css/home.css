@@ -1,0 +1,47 @@
+div.text-box {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+#app-quotes {
+  color: #c6ff93;
+  font-size: 4rem;
+  width: 50%;
+  margin: 20px 15px;
+}
+.SignUpbtn {
+  display: flex;
+  background-color: #79e815;
+  width: 25%;
+  text-decoration: none;
+  justify-content: center;
+  margin: 10px 15px;
+  padding: 5px 7px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.SignUpbtn:hover {
+  background-color: white;
+  color: #79e815;
+}
+
+@media (max-width: 1200px) {
+  .SignUpbtn {
+    width: 30%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .SignUpbtn {
+    width: 30%;
+    font-size: 15px;
+  }
+}

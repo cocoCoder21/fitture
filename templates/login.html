@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
 {% block content %}
 {% if not user.is_authenticated %}
-  <div class="jumbotron login-page">
-    
-      <h2>Welcome to Fitture</h2>
+  <div class="jumbotron">
+    <h1>Log in</h1>
       <form method="post">
         {% csrf_token %}
         {# A more "HTML" way of creating the login form#}
+        <label for="username">Username: </label>
         <input class="login-input" type="text" name="username" placeholder="Username">
 
+        <label for="password">Password: </label>
         <input class="login-input" type="password" name="password" placeholder="Password">
   
         <input type="submit" name="submit" value="Login" class="btn login">
@@ -16,9 +22,11 @@
         <hr>
         <h6>or</h6>
         <div class="choices-btn">
-          <a href="#" class="option-button facebook">Login with Facebook <span class="fa fa-facebook"></span></a>
-          <a href="#" class="option-button gmail">Login with Google <span class="fa fa-google"></span></a>
+          <!-- <a href="#" class="option-button facebook">Login with Facebook <span class="fa fa-facebook"></span></a>
+          <a href="#" class="option-button gmail">Login with Google <span class="fa fa-google"></span></a> -->
+          
         </div>
+        <a href="{% url 'signup' %}">Don't have an account? Sign Up!</a>
 
       </form>
     </div>

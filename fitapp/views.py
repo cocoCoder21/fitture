@@ -6,6 +6,8 @@ from fitapp.models import UserModels
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+
+import cv2
 # Create your views here.
 
 # ================================= FITTURE HOME PAGE FUNCTIONALITIES =====================================
@@ -65,6 +67,7 @@ def user_login(request):
 
 
 def home(request):
+    frame = cv2.videoCapture(0)
     return render(request, 'user_account.html')
 
 

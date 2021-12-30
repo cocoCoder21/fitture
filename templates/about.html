@@ -1,5 +1,97 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/about.css'%}?{% now 'U' %}">
+<link rel="stylesheet" href="{% static 'css/base.css'%}?{% now 'U' %}">
+{% endblock %}
 {% block content %}
-<h3>Why we build this app</h3>
-<h2>Because askhdaksbdakjdnsajdnsdnasdjn</h2>
+<section class="about">
+  <h1>About Fitture</h1>
+  <p>Fitture is a fitness guide, web-based application which has an image processing function using canny edge detection that will detect what body type the 
+    user has based on either the uploaded picture or real-time captured photo of the user’s whole-body portrait. The system will then recommend 
+    certain workout exercises and dietary plans based on the predicted body type to help individuals in meeting their fitness goals more accurately.
+  Fitture is always ready to guide you to the fitness route you desire to pursue, no matter where you are.</p>
+  <div class="row">
+    <div class="about-col1">
+      <div class="layer">
+        <h3>Body Type</h3>
+          <p2>It has a main feature of processing a real-time image
+            that the user can took to predict their body type.
+            The algorithm to be used for the image segmentation
+            is Canny Edge Detection Algorithm (CEDA).
+            The Canny edge detector is an edge detection operator
+            that detects a wide range of edges in images
+            using a multi-stage algorithm.</p2> 
+      </div>
+    </div>
+    <div class="about-col2">
+      <div class="layer">
+        <h3>Workout</h3>
+        <p2>The system aims to increase the user's motivation <br>
+          towards their fitness and nutrition health through <br>
+          generating daily motivational quotes to inspire them. <br>
+          Fitture aims to provide workout programs that are <br>
+          suitable to the type of body the user possess.</p2>
+      </div>
+    </div>
+    <div class="about-col3">
+      <div class="layer">
+        <h3>Dietary Plan</h3>
+        <p2>Our system will serve as a fitness guide <br>
+          to provide users an optimum aid in helping them <br>
+          get closer to their fitness goals. <br>
+          The system will also serve as a nutritionist <br>
+          to take the proper amount of nutrition they need <br>
+          by recommending a proper diet plan <br>
+          that is suitable for the user’s body type. </p2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <section class="about">
+    <h1>About Fitture</h1>
+    <p>Fitture is a fitness guide, web-based application which has an image processing function using canny edge detection that will detect what body type the user has based on either the uploaded picture
+      <br>or real-time captured photo of the user’s whole-body portrait. The system will then recommend certain workout exercises and dietary plans based on the predicted body type
+      <br> to help individuals in meeting their fitness goals more accurately. Fitture is always ready to guide you to the fitness route you desire to pursue, no matter where you are.</p>
+    <div class="row">
+      <div class="about-col">
+        <img class="abt-img" src="{% static 'images/about1.png' %}">
+        <div class="layer">
+          <h3>Body Type</h3>
+            <p2>It has a main feature of processing a real-time image
+              that the user can took to predict their body type.
+              The algorithm to be used for the image segmentation
+              is Canny Edge Detection Algorithm (CEDA).
+              The Canny edge detector is an edge detection operator
+              that detects a wide range of edges in images
+              using a multi-stage algorithm. 
+        </div>
+      </div>
+      <div class="about-col">
+        <img class="abt-img" src="{% static 'images/about2.png' %}">
+        <div class="layer">
+          <h3>Workout</h3>
+          <p2>The system aims to increase the user's motivation <br>
+            towards their fitness and nutrition health through <br>
+            generating daily motivational quotes to inspire them. <br>
+            Fitture aims to provide workout programs that are <br>
+            suitable to the type of body the user possess.</p2>
+        </div>
+      </div>
+      <div class="about-col">
+        <img class="abt-img" src="{% static 'images/about3.png' %}">
+        <div class="layer">
+          <h3>Dietary Plan</h3>
+          <p2>Our system will serve as a fitness guide <br>
+            to provide users an optimum aid in helping them <br>
+            get closer to their fitness goals. <br>
+            The system will also serve as a nutritionist <br>
+            to take the proper amount of nutrition they need <br>
+            by recommending a proper diet plan <br>
+            that is suitable for the user’s body type. </p2>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
 {% endblock %}

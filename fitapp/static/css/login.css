@@ -1,80 +1,42 @@
-.links {
-  position: absolute;
-  right: 40px;
-  color: red;
-}
-div.login-page {
-  margin: 20px auto;
-  padding: 10px 5px;
-  background-image: linear-gradient(
-    240deg,
-    rgb(128, 237, 190),
-    rgb(49, 125, 92)
-  );
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 40vw;
-}
-div.login-page > * {
+div.jumbotron {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 40vw;
-  margin: 10px auto;
-}
-div.login-page form > * {
-  margin: 5px 10px;
+  margin: 10px 5px;
   padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  border-radius: 20px;
 }
-
-input.login-input {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid black;
-}
-
-input.login {
-  background-image: linear-gradient(120deg, green, rgb(128, 237, 190));
-  color: aliceblue;
-}
-input.login:hover {
-  background-image: linear-gradient(120deg, green, rgb(128, 237, 190));
-}
-
-div.choices-btn {
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-div.choices-btn > a {
+form > h6,
+a {
   text-align: center;
-  margin: 5px 10px;
+}
+input {
+  margin: 10px 5px;
   padding: 5px 10px;
-  width: 200px;
-  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 300px;
 }
-.option-button {
+
+input[type="submit"] {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
   border: 1px solid black;
-  border-radius: 5px;
 }
-.facebook {
-  background-color: rgba(66, 103, 178, 0.9);
-  color: aliceblue;
+
+input[type="submit"]:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
 }
-.gmail {
-  background-color: rgba(187, 0, 27, 0.8);
-  color: aliceblue;
-}
-.facebook:hover {
-  color: black;
-  background-color: rgba(66, 103, 178, 1);
-}
-.gmail:hover {
-  color: black;
-  background-color: rgba(187, 0, 27, 0.9);
-}
-hr {
-  height: 5px;
-  width: 50%;
+a {
+  color: #4c9b08;
 }
